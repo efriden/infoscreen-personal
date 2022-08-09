@@ -1,0 +1,32 @@
+<html>
+<head>
+  <style>
+    body {background-color: black}
+    iframe { margin:10px}
+    #over {font-variant-numeric: oldstyle-nums; font-size:4em; position:absolute; top:30px; left:60px; z-index:2; color:white; }
+  </style>
+  <script>
+    window.setInterval(function() {
+        reloadIFrame()
+    }, 300000);
+
+    function reloadIFrame() {
+        console.log('reloading..');
+        document.getElementById('presentation').src="https://docs.google.com/presentation/d/e/2PACX-1vR3uIytpwBKscjsYJi0FdEEM292k-zIcBCIx8rawVzT00TSPV6yVrGAAmlZQEJ9Rg4BJlKoWcTvFuZk/embed?start=true&loop=true&delayms=10000";
+    }
+  </script>
+</head>
+
+<body>
+  
+  <iframe id='presentation' src="https://docs.google.com/presentation/d/e/2PACX-1vR3uIytpwBKscjsYJi0FdEEM292k-zIcBCIx8rawVzT00TSPV6yVrGAAmlZQEJ9Rg4BJlKoWcTvFuZk/embed?start=true&loop=true&delayms=10000" frameborder="0" width="1920" height="1080" allowfullscreen="true" mozallowfullscreen="true"></iframe>
+  
+  <div id="over"></div>
+  <div>
+    <script>
+    date = new Date().toLocaleDateString();
+    document.write(date);
+    </script>
+  </div>
+
+</body>
